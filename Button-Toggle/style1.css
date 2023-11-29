@@ -1,0 +1,22 @@
+.button-design{
+    background-color: tomato;
+    height: 200px;
+    text-align: center;
+    padding-top: 50px;
+}
+.toggle-1, .toggle-2, .toggle-3{
+    border-radius: 50px;
+}
+.reset{
+    background-color: aqua;
+
+}
+.showhide1{
+    background-color: aquamarine;
+}
+.showhide2{
+    background-color: aqua;
+}
+.showhide3{
+    background-color: bisque;
+}

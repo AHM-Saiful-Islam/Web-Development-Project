@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html button and collapse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style1.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    // Test toggle-collapse button
+    <div class="button-design">
+        // create three toggle button
+        <button type="button" class="btn btn-primary toggle-1" data-bs-toggle="collapse" data-bs-target="#collapsebutton1" aria-expanded="false" 
+            aria-controls="collapsebutton1">
+            toggle-1
+        </button>
+        <button type="button" class="btn btn-primary toggle-1" data-bs-toggle="collapse" data-bs-target="#collapsebutton2" aria-expanded="false" 
+            aria-controls="collapsebutton2">
+            toggle-2
+        </button>
+        <button type="button" class="btn btn-primary toggle-1" data-bs-toggle="collapse" data-bs-target="#collapsebutton3" aria-expanded="false" 
+            aria-controls="collapsebutton3">
+            toggle-3
+        </button>
+
+        // collapsing data for three toggle button
+        <div class="collapse" id="collapsebutton1">
+            <div class="card card-body showhide1">
+                You clicked toggle 1. 
+            </div>
+        </div>
+        <div class="collapse" id="collapsebutton2">
+            <div class="card card-body showhide2">
+                You clicked toggle 2. 
+            </div>
+        </div>
+        <div class="collapse" id="collapsebutton3">
+            <div class="card card-body showhide3">
+                You clicked toggle 3. 
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
