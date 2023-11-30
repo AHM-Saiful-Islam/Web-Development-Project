@@ -1,0 +1,36 @@
+.button-design{
+    background-color:bisque;
+    height: 700px;
+    text-align: center;
+    padding-top: 200px;
+}
+.toggle-all, .toggle-a, .toggle-b, .toggle-c{
+    border-radius: 10px;
+}
+.collapseDesign1{
+    background-color: aquamarine;
+}
+.collapseDesign2{
+    background-color: aqua;
+}
+.collapseDesign3{
+    background-color: grey;
+}
+.collapseDesign4{
+    background-color:antiquewhite;
+}
+.collapseDesign5{
+    background-color:blue;
+}
+.collapseDesign6{
+    background-color:azure;
+}
+.collapseDesign7{
+    background-color:beige;
+}
+.collapseDesign8{
+    background-color:bisque;
+}
+.collapseDesign9{
+    background-color:aliceblue;
+}

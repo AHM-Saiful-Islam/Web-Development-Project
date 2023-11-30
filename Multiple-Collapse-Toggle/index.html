@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html button and collapse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style1.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Test toggle-collapse button -->
+    <div class="button-design">
+        <!-- create four toggle button -->
+        <p>
+            <button type="button" class="btn btn-primary toggle-all" data-bs-toggle="collapse" data-bs-target=".collapse-all"
+                aria-expanded="true" aria-controls="collapse1 collapse2 collapse3 collapse4 collapse5 collapse6 collapse7 collapse8 collapse9">
+                toggle All
+            </button>
+        
+            <button type="button" class="btn btn-primary toggle-a" data-bs-toggle="collapse" data-bs-target=".toggleA"
+                aria-expanded="true" aria-controls="collapse1 collapse5 collapse8">
+                toggle A(audit)
+            </button>
+        
+            <button type="button" class="btn btn-primary toggle-b" data-bs-toggle="collapse" data-bs-target=".toggleB"
+                aria-expanded="true" aria-controls="collapse2 collapse4 collapse7">
+                toggle B(management)
+            </button>
+        
+            <button type="button" class="btn btn-primary toggle-c" data-bs-toggle="collapse" data-bs-target=".toggleC"
+                aria-expanded="true" aria-controls="collapse3 collapse6 collapse9">
+                toggle C(internal)
+            </button>
+        </p>
+
+        <!-- collapsing data for four toggle button -->
+        <div class="row">
+            <div class="col">
+                <div class="collapse collapse-all toggleA show" id="collapse1">
+                    <div class="card card-body collapseDesign1">
+                        Section 1.1 
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleB show" id="collapse2">
+                    <div class="card card-body collapseDesign2">
+                        Section 1.2
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleC show" id="collapse3">
+                    <div class="card card-body collapseDesign3">
+                        Section 1.3
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleB show" id="collapse4">
+                    <div class="card card-body collapseDesign4">
+                        Section 2.1
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleA show" id="collapse5">
+                    <div class="card card-body collapseDesign5">
+                        Section 2.2
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleC show" id="collapse6">
+                    <div class="card card-body collapseDesign6">
+                        Section 3.1
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleB show" id="collapse7">
+                    <div class="card card-body collapseDesign7">
+                        Section 3.2
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleA show" id="collapse8">
+                    <div class="card card-body collapseDesign8">
+                        Section 3.3
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse collapse-all toggleC show" id="collapse9">
+                    <div class="card card-body collapseDesign9">
+                        Section 3.4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Multiple targets -->
+    <!-- 
+    1. A <button> or <a> can show and hide multiple elements by referencing them with a selector such as id, in its href or data-bs-target attribute. 
+    2. Multiple <button> or <a> can show and hide an element if they each reference it with their href or data-bs-target attribute 
+    -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
