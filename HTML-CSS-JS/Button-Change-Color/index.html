@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Button Color on Click</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your custom styles here */
+        body{
+            background-color: yellow;
+        }
+        h1{
+            color: brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+        .btn-color-change {
+            transition: background-color 0.3s;
+        }
+
+        .btn-color-change.clicked {
+            background-color: gray; /* Change this to the desired color */
+        }
+        
+
+        /* Center the buttons */
+        .center-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>These are the color changing button</h1><br>
+    <div class="center-buttons">
+        <button type="button" class="btn btn-primary btn-color-change" id="button1">
+            Click me to change color 1
+        </button>
+
+        <button type="button" class="btn btn-success btn-color-change" id="button2">
+            Click me to change color 2
+        </button>
+
+        <button type="button" class="btn btn-info btn-color-change" id="button3">
+            Click me to change color 3
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function changeColor(buttonId) {
+            var button = document.getElementById(buttonId);
+            button.classList.toggle('clicked');
+        }
+
+        document.getElementById('button1').addEventListener('click', function () {
+            changeColor('button1');
+        });
+
+        document.getElementById('button2').addEventListener('click', function () {
+            changeColor('button2');
+        });
+
+        document.getElementById('button3').addEventListener('click', function () {
+            changeColor('button3');
+        });
+    </script>
+</body>
+
+</html>
