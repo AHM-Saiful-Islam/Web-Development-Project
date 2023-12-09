@@ -14,9 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import debug_toolbar
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+# add app's urls here. when req playground/hello, playground.urls app will run and run hello portion.
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('playground/', include('playground.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
