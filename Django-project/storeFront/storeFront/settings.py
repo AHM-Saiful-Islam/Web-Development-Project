@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'playground',
-    'debug_toolbar'
+    'debug_toolbar',
+    'berlin'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# defines a location where static files are collected when you use the collectstatic command
+# collect all the static files from your apps into a single folder using the 'python manage.py collectstatic' command.
+# In practice, run collectstatic any time you change static files and before deploying into production.
+ 
+STATIC_ROOT = BASE_DIR / 'static_collected'

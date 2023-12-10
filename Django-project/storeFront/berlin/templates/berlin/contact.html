@@ -1,0 +1,43 @@
+{% extends "berlin/layout.html" %}
+{% block contact %}
+Contact
+{% endblock %}
+{% block content %}
+<p>Important Contact List: </p>
+<table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Website Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Emergency Services</td>
+        <td>112</td>
+        <td><a href="https://www.berlin.de/en/emergencies/">Berlin Emergencies</a></td>
+      </tr>
+      <tr>
+        <td>Police</td>
+        <td>110</td>
+        <td><a href="https://www.berlin.de/police/en/">Berlin Police</a></td>
+      </tr>
+      <tr>
+        <td>Fire Department</td>
+        <td>112</td>
+        <td><a href="https://www.berliner-feuerwehr.de/">Berlin Fire Department</a></td>
+      </tr>
+      <tr>
+        <td>Medical Emergency (Ambulance)</td>
+        <td>112</td>
+        <td><a href="https://www.berlin.de/sen/gesundheit/gesundheitswesen/notdienste/">Medical Emergency</a></td>
+      </tr>
+      <tr>
+        <td>Poison Control Center</td>
+        <td>+49 30 19240</td>
+        <td><a href="https://www.bzga.de/en/service/telephone-hotlines/poison-emergency-call/">Poison Control</a></td>
+      </tr>
+    </tbody>
+</table>
+{% endblock %}

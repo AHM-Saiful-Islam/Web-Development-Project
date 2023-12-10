@@ -11,4 +11,4 @@ def say_hello(request):
     # In this func, in real life, we can pull data from db, transform data,
     # send emails etc.
     x = calculate() # create breakpoint for debugging
-    return render(request, 'hello.html', { 'name': 'Rasel'}) # using render func to send req and return template as response
+    return render(request, 'hello.html', { 'name': 'Saif'}) # using render func to send req and return template as response

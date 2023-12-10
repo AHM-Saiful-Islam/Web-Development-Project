@@ -17,10 +17,14 @@ Including another URLconf
 import debug_toolbar
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-# add app's urls here. when req playground/hello, playground.urls app will run and run hello portion.
+# add app's urls here. \for playground when req playground/hello, playground.urls app will run and run hello portion.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('playground/', include('playground.urls')),
+    path("playground/", include("playground.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
+    path("berlin/", include("berlin.urls")),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
