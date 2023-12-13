@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path('hello/', views.say_hello, name="hello"), # as playground/ is added to main urls.py file. here you only need to add hello/. Route must end with forward slash '/'. 
     path("home/", views.home, name="home"),
+    path('join/', views.join, name='join'),
 ]

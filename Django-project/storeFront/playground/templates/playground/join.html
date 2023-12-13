@@ -1,0 +1,50 @@
+{% extends "playground/base.html" %}
+
+{% block content %}
+<!-- form -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">Join Today!</h3>
+                    <form method="POST" action="{% url 'join' %}"> <!-- It will go to the join function in views.py -->
+                        {% csrf_token %}
+
+                         <!-- First Name Input -->
+                         <div class="mb-3">
+                            <input type="text" class="form-control" id="inputFirstName" placeholder="Enter your first name" name="fname">
+                        </div>
+
+                        <!-- Last Name Input -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Enter your Last Name" name="lname">
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" required name="email">
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" required name="password">
+                        </div>
+
+                        <!-- Integer Input -->
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="inputAge" placeholder="Enter your age" name="age">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

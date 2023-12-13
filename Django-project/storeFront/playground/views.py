@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Member
 from .models import Product
+from .forms import MemberForm
 
 # dummy class for debugger preactice
 def calculate():
@@ -25,4 +26,12 @@ def home(request):
                       'all_products': all_products,
                   }
             ) # taking all in all_items. all_items is a var which will be used in home.html 
-    
+
+def join(request):
+    if request.method == "POST":
+        form = MemberForm(request.POST or None)
+        if form.is_valid():
+            form.save()
+        return render(request, 'playground/join.html', {})
+    else:
+        return render(request, 'playground/join.html', {})
