@@ -1,0 +1,55 @@
+{% extends "playground/base.html" %}
+
+{% block content %}
+<!-- form -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">Enter product details into database!</h3>
+                    <form method="POST" action="{% url 'product_entry' %}"> <!-- It will go to the product function in views.py -->
+                        {% csrf_token %}
+
+                         <!-- Product Name Input -->
+                         <div class="mb-3">
+                            <input type="text" class="form-control" id="inputProductName" placeholder="Enter Product name" name="name">
+                        </div>
+
+                        <!-- description Input -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="inputDescription" placeholder="Enter Product description" name="description">
+                        </div>
+
+                        <!-- Stock Input -->
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="inputStock" placeholder="Enter amount of product you have in stock" required name="stock">
+                        </div>
+
+                        <!-- category Input -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="inputCategory" placeholder="Enter Product category" required name="category">
+                        </div>
+
+                        <!-- price Input -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="inputPrice" placeholder="Enter Product Price" name="price">
+                        </div>
+
+                         <!-- company Name Input -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="inputCompany" placeholder="Enter company name" name="company">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

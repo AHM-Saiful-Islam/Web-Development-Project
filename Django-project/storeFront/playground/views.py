@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Member
 from .models import Product
 from .forms import MemberForm
+from .forms import ProductForm
 
 # dummy class for debugger preactice
 def calculate():
@@ -27,6 +28,7 @@ def home(request):
                   }
             ) # taking all in all_items. all_items is a var which will be used in home.html 
 
+# for data entry to Product database
 def join(request):
     if request.method == "POST":
         form = MemberForm(request.POST or None)
@@ -35,3 +37,13 @@ def join(request):
         return render(request, 'playground/join.html', {})
     else:
         return render(request, 'playground/join.html', {})
+
+# for data entry to Product database
+def product_entry(request):
+    if request.method == "POST": # if req method is POST take ProductForm data into the form or take none.
+        form = ProductForm(request.POST or None)
+        if form.is_valid(): 
+            form.save()   # check the validity of form. save if valid
+        return render(request, 'playground/product_entry.html', {})  # return to product_entry.html page after saving
+    else:    
+        return render(request, 'playground/product_entry.html') # if there is no POST req, return to the form.
