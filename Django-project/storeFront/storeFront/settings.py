@@ -31,15 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.messages',
+    'django.contrib.sessions',
     'django.contrib.staticfiles',
     'playground',
     'debug_toolbar',
     'berlin'
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",

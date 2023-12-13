@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'playground/site.css' %}">
+</head>
+<body>
+    <div class= "container">
+        <!-- showing Member database -->
+        <h1>Members Database</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            {% for member in all_items %}
+            <tbody>
+                <tr>
+                    <td>{{ member.fname }} {{ member.lname }}</td>
+                    <td>{{ member.age }}</td>
+                    <td>{{ member.email }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        
+        <!-- showing Product database -->
+        <h1>Product Database</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Stock</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            {% for product in all_products %}
+            <tbody>
+                <tr>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.stock }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.company }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+    
+</body>
+</html>
