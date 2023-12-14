@@ -11,39 +11,39 @@
                     <form method="POST" action="{% url 'product_entry' %}"> <!-- It will go to the product function in views.py -->
                         {% csrf_token %}
 
-                         <!-- Product Name Input -->
+                        <!-- Product Name Input -->
                          <div class="mb-3">
-                            <input type="text" class="form-control" id="inputProductName" placeholder="Enter Product name" name="name">
+                            <input type="text" class="form-control" id="inputProductName" placeholder="Enter Product name" name="name", value="{{ name }}"> <!-- input value of dic_var in value attr -->
                         </div>
 
                         <!-- description Input -->
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="inputDescription" placeholder="Enter Product description" name="description">
+                            <input type="text" class="form-control" id="inputDescription" placeholder="Enter Product description" name="description", value="{{ description }}">
                         </div>
 
                         <!-- Stock Input -->
                         <div class="mb-3">
-                            <input type="number" class="form-control" id="inputStock" placeholder="Enter amount of product you have in stock" required name="stock">
+                            <input type="number" class="form-control" id="inputStock" placeholder="Enter amount of product you have in stock" required name="stock", value="{{ stock }}">
                         </div>
 
                         <!-- category Input -->
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="inputCategory" placeholder="Enter Product category" required name="category">
+                            <input type="text" class="form-control" id="inputCategory" placeholder="Enter Product category" required name="category", value="{{ category }}">
                         </div>
 
                         <!-- price Input -->
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="inputPrice" placeholder="Enter Product Price" name="price">
+                            <input type="text" class="form-control" id="inputPrice" placeholder="Enter Product Price" name="price", value="{{ price }}">
                         </div>
 
                          <!-- company Name Input -->
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="inputCompany" placeholder="Enter company name" name="company">
+                            <input type="text" class="form-control" id="inputCompany" placeholder="Enter company name" name="company", value="{{ company }}">
                         </div>
 
                         <!-- Submit Button -->
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
 
                     </form>
